@@ -1,0 +1,46 @@
+# Python编译文件
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# 开发环境
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE配置
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 项目特定文件
+# 模型保存目录
+models/obj/saved/
+models/obj/log/
+*.pth
+*.pt
+*.onnx
+
+# 数据集和中间文件
+*.jpg
+*.jpeg
+*.png
+*.json
+/data/
+/datasets/
+models/obj/split/train/
+models/obj/split/test/
+models/obj/train_yolo
+models/obj/val_yolo
+# 日志文件
+*.log
+logs/
+tensorboard/
+
+# 系统文件
+.DS_Store
+Thumbs.db

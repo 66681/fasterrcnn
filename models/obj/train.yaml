@@ -1,0 +1,34 @@
+# 数据集配置
+dataset:
+  train_images_dir: "D:/python_ws/code/MultiVisionModels-dev/multivisionmodels/models/obj/split/train/images"
+  train_json_dir: "D:/python_ws/code/MultiVisionModels-dev/multivisionmodels/models/obj/split/train/json"
+  test_images_dir: "D:/python_ws/code/MultiVisionModels-dev/multivisionmodels/models/obj/split/val/images"
+  test_json_dir: "D:/python_ws/code/MultiVisionModels-dev/multivisionmodels/models/obj/split/val/json"
+  batch_size: 4
+  num_workers: 2
+
+# 模型配置
+model:
+  num_classes: 2
+  weights: "DEFAULT"
+  trainable_backbone_layers: 3
+
+# 训练配置
+training:
+  epochs: 200
+  learning_rate: 0.001
+  momentum: 0.9
+  weight_decay: 0.0005
+  lr_scheduler: true
+  lr_step_size: 10
+  lr_gamma: 0.1
+# 保存配置
+save:
+  model_dir: "D:/python_ws/code/MultiVisionModels-dev/multivisionmodels/models/obj/saved"
+  log_dir: "D:/python_ws/code/MultiVisionModels-dev/multivisionmodels/models/obj/log"
+  save_frequency: 5
+
+# 预训练配置
+pretrain:
+  use_pretrain: true  # 是否使用预训练模型继续训练
+  checkpoint_path: "D:/python_ws/code/MultiVisionModels-dev/multivisionmodels/models/obj/saved/best_model_loss_0.2378.pth"  # 预训练模型路径
